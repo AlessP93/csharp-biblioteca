@@ -1,4 +1,5 @@
 ﻿using System.Runtime.ConstrainedExecution;
+using System.Runtime.Serialization;
 //Si vuole progettare un sistema per la gestione di una biblioteca. Gli utenti si possono registrare al sistema, fornendo:
 //cognome,
 //nome,
@@ -26,31 +27,33 @@ Biblioteca biblioteca = new Biblioteca();
 
 public class Biblioteca
 {
-    public class Documents
+    public class Document
     {
         public string titolo;
         public int anno;
         public string settore;
-        public bool stato;
-        public int scaffale;
+        public bool stato; //solo qui
+        public int scaffale;// solo qui
         public string autore;
     }
 
     public class Film
     {
-        public long durata;
+        public long durata; //durata
         public string titolo;
         public int anno;
         public string settore;
         public string autore;
+        public int seriale; //seriale
     }
-    public class Books
+    public class Book
     {
-        public int pagine;
+        public int pagine; //pagine
         public string titolo;
         public int anno;
         public string settore;
         public string autore;
+        public string isbn; //isbn
     }
 }
 
